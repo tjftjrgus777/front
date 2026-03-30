@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KoreaConnect - Write Post</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            soft: "0 1px 3px rgba(0,0,0,0.04)"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#FAFAFA] flex flex-col">
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200/80">
+  <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="flex items-center gap-2 no-underline">
+        <div class="w-8 h-8 bg-[#2563EB] rounded-lg flex items-center justify-center">
+          <i data-lucide="globe" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="text-[18px] text-gray-900 tracking-[-0.3px]" style="font-weight: 600;">KoreaConnect</span>
+      </a>
+      <nav class="flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-[14px] no-underline transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-50" style="font-weight: 500;">Community</a>
+        <a href="#" class="px-3 py-2 rounded-lg text-[14px] no-underline transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-50" style="font-weight: 500;">Tips &amp; Guides</a>
+        <a href="#" class="px-3 py-2 rounded-lg text-[14px] no-underline transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-50" style="font-weight: 500;">Events</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="write-post.html" class="px-4 py-2 bg-[#2563EB] text-white rounded-lg text-[14px] no-underline hover:bg-[#1d4ed8] transition-colors" style="font-weight: 500;">Write Post</a>
+      <a href="login.html" class="px-4 py-2 border border-gray-200 text-gray-700 rounded-lg text-[14px] no-underline hover:bg-gray-50 transition-colors" style="font-weight: 500;">Sign In</a>
+    </div>
+  </div>
+</header>
+
+  <main class="flex-1">
+    <div class="max-w-[1200px] mx-auto px-6 py-8">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-[13px] text-gray-500 no-underline hover:text-gray-700 mb-6 transition-colors" style="font-weight: 500;">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Community
+      </a>
+
+      <h1 class="text-[24px] text-gray-900 mb-6" style="font-weight: 700;">Write a New Post</h1>
+
+      <div class="flex gap-8">
+        <div class="flex-1 min-w-0">
+          <form data-static-form="true" class="bg-white rounded-xl border border-gray-200/80 p-6" style="box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+            <div class="mb-5">
+              <label class="block text-[13px] text-gray-700 mb-2" style="font-weight: 600;">Title</label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Enter a descriptive title..."
+                class="w-full px-4 py-3 border border-gray-200 rounded-xl text-[15px] text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all bg-white"
+              />
+            </div>
+
+            <div class="mb-5">
+              <label class="block text-[13px] text-gray-700 mb-2" style="font-weight: 600;">Category</label>
+              <select
+                name="category"
+                class="w-full px-4 py-3 border border-gray-200 rounded-xl text-[14px] text-gray-900 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all bg-white appearance-none cursor-pointer"
+              >
+                <option selected disabled>Select a category...</option>
+                <option>🍜 Food</option>
+                <option>🚇 Transport</option>
+                <option>🛡️ Safety</option>
+                <option>💬 General</option>
+              </select>
+            </div>
+
+            <div class="mb-2">
+              <label class="block text-[13px] text-gray-700 mb-2" style="font-weight: 600;">Content</label>
+              <div class="flex items-center gap-1 p-1.5 border border-gray-200 border-b-0 rounded-t-xl bg-gray-50">
+                <button type="button" title="Bold" class="w-8 h-8 rounded-md flex items-center justify-center text-gray-500 hover:bg-white hover:text-gray-700 cursor-pointer transition-colors"><i data-lucide="bold" class="w-4 h-4"></i></button>
+                <button type="button" title="Italic" class="w-8 h-8 rounded-md flex items-center justify-center text-gray-500 hover:bg-white hover:text-gray-700 cursor-pointer transition-colors"><i data-lucide="italic" class="w-4 h-4"></i></button>
+                <button type="button" title="Link" class="w-8 h-8 rounded-md flex items-center justify-center text-gray-500 hover:bg-white hover:text-gray-700 cursor-pointer transition-colors"><i data-lucide="link" class="w-4 h-4"></i></button>
+                <button type="button" title="List" class="w-8 h-8 rounded-md flex items-center justify-center text-gray-500 hover:bg-white hover:text-gray-700 cursor-pointer transition-colors"><i data-lucide="list" class="w-4 h-4"></i></button>
+                <button type="button" title="Image" class="w-8 h-8 rounded-md flex items-center justify-center text-gray-500 hover:bg-white hover:text-gray-700 cursor-pointer transition-colors"><i data-lucide="image" class="w-4 h-4"></i></button>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <textarea
+                name="content"
+                rows="14"
+                placeholder="Share your experience, tips, or questions..."
+                class="w-full px-4 py-4 border border-gray-200 rounded-b-xl rounded-t-none text-[14px] text-gray-900 placeholder:text-gray-400 resize-none focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-100 transition-all leading-relaxed bg-white"
+              ></textarea>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <p class="text-[12px] text-gray-400">Posts are public and visible to all visitors.</p>
+              <div class="flex gap-3">
+                <a href="index.html" class="px-5 py-2.5 border border-gray-200 text-gray-600 rounded-lg text-[14px] no-underline hover:bg-gray-50 transition-colors" style="font-weight: 500;">
+                  Cancel
+                </a>
+                <button type="submit" class="px-6 py-2.5 bg-[#2563EB] text-white rounded-lg text-[14px] hover:bg-[#1d4ed8] cursor-pointer transition-colors" style="font-weight: 500;">
+                  Publish Post
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="w-[320px] shrink-0 flex flex-col gap-5">
+          <div class="bg-white rounded-xl border border-gray-200/80 p-5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+            <h3 class="text-[14px] text-gray-900 mb-3" style="font-weight: 600;">Writing Guidelines</h3>
+            <ul class="flex flex-col gap-2.5 list-none p-0 m-0">
+              <li class="flex gap-2 text-[13px] text-gray-600 leading-relaxed">
+                <span class="w-5 h-5 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center text-[11px] shrink-0" style="font-weight: 600;">1</span>
+                Write in English for maximum reach
+              </li>
+              <li class="flex gap-2 text-[13px] text-gray-600 leading-relaxed">
+                <span class="w-5 h-5 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center text-[11px] shrink-0" style="font-weight: 600;">2</span>
+                Be specific about locations and prices
+              </li>
+              <li class="flex gap-2 text-[13px] text-gray-600 leading-relaxed">
+                <span class="w-5 h-5 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center text-[11px] shrink-0" style="font-weight: 600;">3</span>
+                Include practical tips others can use
+              </li>
+              <li class="flex gap-2 text-[13px] text-gray-600 leading-relaxed">
+                <span class="w-5 h-5 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center text-[11px] shrink-0" style="font-weight: 600;">4</span>
+                Add relevant category for easy discovery
+              </li>
+              <li class="flex gap-2 text-[13px] text-gray-600 leading-relaxed">
+                <span class="w-5 h-5 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center text-[11px] shrink-0" style="font-weight: 600;">5</span>
+                Be respectful of Korean culture
+              </li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 rounded-xl border border-amber-100/80 p-5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+            <h3 class="text-[14px] text-gray-900 mb-2" style="font-weight: 600;">Community Rules</h3>
+            <p class="text-[13px] text-gray-600 leading-relaxed">
+              No spam, no promotional content, and no offensive language. Posts violating these rules will be removed.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-200/80 bg-gray-50 mt-16">
+  <div class="max-w-[1200px] mx-auto px-6 py-10">
+    <div class="flex justify-between items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-7 h-7 bg-[#2563EB] rounded-lg flex items-center justify-center">
+            <i data-lucide="globe" class="w-4 h-4 text-white"></i>
+          </div>
+          <span class="text-[15px] text-gray-900" style="font-weight: 600;">KoreaConnect</span>
+        </div>
+        <p class="text-[13px] text-gray-500 max-w-[300px] leading-relaxed">
+          A community platform for foreign tourists visiting Korea. Share tips, ask questions, and connect with fellow travelers.
+        </p>
+      </div>
+      <div class="flex gap-16">
+        <div>
+          <h4 class="text-[13px] text-gray-400 uppercase tracking-wider mb-3" style="font-weight: 600;">Community</h4>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Food</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Transport</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Safety</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">General</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-[13px] text-gray-400 uppercase tracking-wider mb-3" style="font-weight: 600;">Support</h4>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Help Center</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Contact</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Terms</a>
+            <a href="#" class="text-[13px] text-gray-600 no-underline hover:text-gray-900 transition-colors">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-gray-200 text-[12px] text-gray-400">
+      &copy; 2026 KoreaConnect. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  <script>
+    lucide.createIcons();
+    document.querySelectorAll("form[data-static-form='true']").forEach(function(form) {
+      form.addEventListener("submit", function(e) { e.preventDefault(); });
+    });
+  </script>
+</body>
+</html>
